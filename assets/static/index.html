@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<script type="text/javascript" src="/javascripts/vendor/require.js">
+</script>
+
+<script type="text/javascript">
+
+require({
+    urlArgs: "b=" + ((new Date()).getTime()),
+    paths: {
+      'jquery': '../javascripts/vendor/jquery',
+    }
+}, ["tester"], function(TestClient) {
+
+    console.log(TestClient);
+
+    var testClient = new TestClient("Hooray!");
+
+});
+
+</script>
+
+</head>
+<body>
+    <h1>Here</h1>
+</body>
+</html>

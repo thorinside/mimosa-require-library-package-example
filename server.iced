@@ -22,7 +22,8 @@ exports.startServer = (config, callback) ->
     app.use express.compress()
     app.use config.server.base, app.router
     app.use express.static(config.watch.compiledDir)
-
+    app.use express.static(config.watch.compiledDir + "/static")
+    
   app.configure 'development', ->
     app.use express.errorHandler()
 
