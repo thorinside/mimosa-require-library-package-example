@@ -1,9 +1,9 @@
-require
-  urlArgs: "b=#{(new Date()).getTime()}"
-  paths:
-    jquery: 'vendor/jquery'
-    testclient: 'testclient'
-  ['vendor/iced'], ->
-    await require ['app/example-view'], defer ExampleView
-    view = new ExampleView()
-    view.render('body')
+require ["common"], ->
+  require
+    urlArgs: "b=#{(new Date()).getTime()}"
+    ['testclient','vendor/iced'], (TestClient) ->
+      await require ['app/example-view'], defer ExampleView
+      view = new ExampleView()
+      view.render('body')
+
+      testclient = new TestClient("Howdy");

@@ -27,6 +27,7 @@ what
 # Output folder
 /public
 /dist
+/build
 
 # Numerous always-ignore extensions
 *~
