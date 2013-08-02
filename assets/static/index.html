@@ -8,14 +8,14 @@
 
 require({
     urlArgs: "b=" + ((new Date()).getTime()),
-    paths: {
-      'jquery': '../javascripts/vendor/jquery',
-    }
 }, ["tester"], function(TestClient) {
 
     console.log(TestClient);
 
     var testClient = new TestClient("Hooray!");
+
+    console.log($);
+    console.log(jQuery);
 
 });
 
