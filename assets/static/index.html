@@ -1,24 +1,22 @@
 <html>
 <head>
 
+<!--
 <script type="text/javascript" src="/javascripts/vendor/require.js">
 </script>
+-->
+<script type="text/javascript" src="tester.js">
 
-<script type="text/javascript">
+</script>
 
-require({
-    urlArgs: "b=" + ((new Date()).getTime()),
-}, ["tester"], function(TestClient) {
-
+<script>
     console.log(TestClient);
 
     var testClient = new TestClient("Hooray!");
 
     console.log($);
     console.log(jQuery);
-
-});
-
+    
 </script>
 
 </head>
